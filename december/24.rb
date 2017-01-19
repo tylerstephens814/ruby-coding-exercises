@@ -1,6 +1,9 @@
+#Completed Jan 19, 2017
+
 require 'rspec'
 
 def new_max array_of_elements
+  array_of_elements.inject{|a, b| a > b ? a : b}
 end
 
 describe 'New Max method' do
