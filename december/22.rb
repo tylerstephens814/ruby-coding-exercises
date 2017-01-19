@@ -1,3 +1,6 @@
+#completed January 19, 2017
+
+
 require 'rspec'
 
 headers = [
@@ -37,6 +40,7 @@ rangers = [
 ]
 
 def position_filter(headers, *data)
+  filter = headers.zip(*data)
 end
 
 describe 'Position Filter' do
@@ -46,3 +50,10 @@ describe 'Position Filter' do
     expect(position_filter(test_headers, test_team).first).to eq(['1B', 'First Base Player'])
   end
 end
+
+
+
+
+
+
+

@@ -1,8 +1,3 @@
-#COMPLETED
-
-
-require 'rspec'
-
 string_array = [
   "Web IconHTML & CSS100%",
   "Command LineLearn the Command Line100%",
@@ -35,8 +30,4 @@ end
 end
 
 
-describe "String Parser" do
-  it 'can take a string and output the correct values' do
-    expect(string_parser(string_array)).to eq([100, 100, 50, 100, 100, 20, 1, 100, 55])
-  end
-end
+  p string_parser(string_array)

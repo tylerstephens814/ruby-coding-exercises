@@ -1,6 +1,9 @@
+#Completed Janunuary 19,2017
+
 require 'rspec'
 
 def random_numbers
+  set = Array.new(20) {rand(1..999)}
 end
 
 describe 'Random number collection generator' do

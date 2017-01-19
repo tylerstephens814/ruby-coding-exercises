@@ -1,7 +1,10 @@
+#COMPLETED
+
+
 require 'rspec'
 
 def sentence_reverser str
-
+pieces = str.split(' ').reverse!.join(' ')
 end
 
 describe "Sentence reverser" do
