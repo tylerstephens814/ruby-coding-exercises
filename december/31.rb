@@ -1,3 +1,5 @@
+#Complete Jan 31, 2017
+
 require 'rspec'
 
 # ¥
@@ -5,6 +7,16 @@ require 'rspec'
 # $
 
 def currency_converter amount, location
+  case location
+  when 'US' 
+    "$#{amount}.00"
+  when 'Japan'
+    "¥#{amount}"
+  when 'UK'
+    "£#{amount},00"
+  else
+    "Error"
+  end
 end
 
 describe 'Currency converter' do
