@@ -1,10 +1,17 @@
+#Complete Jan 20, 2017
+
 require 'rspec'
 
 class String
   def total_words
+    words = self.scan(/\w+/)
+    words.count
   end
 
   def word_list
+    list = Hash.new(0)
+    downcase.scan(/\w+/) {|w| list[w] += 1}
+    list
   end
 end
 
