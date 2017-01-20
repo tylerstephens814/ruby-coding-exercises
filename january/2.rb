@@ -1,19 +1,24 @@
+#Complete Jan 20, 2017
+
 require 'rspec'
 
-# <!doctype html>
-
-# <html lang="en">
-# <head>
-#   <meta charset="utf-8">
-# 
-#   <title>Title Goes Here</title>
-# </head>
-# 
-# <body>
-# </body>
-# </html>
-
 def html_generator title
+<<HTML
+  <!doctype html>
+
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title> #{title} 
+    </title>
+  </head>
+
+  <body>
+  </body>
+  </html>
+HTML
+
 end
 
 describe 'HTML generator' do
