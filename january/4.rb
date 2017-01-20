@@ -1,3 +1,5 @@
+#Completed Jan 20, 2017
+
 require 'rspec'
 
 class ContentController
@@ -6,9 +8,10 @@ class ContentController
   end
 
   def hidden_content
-    @word.commentize
+    "# #{@word}"
   end
 end
+
 
 describe 'Refining Strings for a specific module' do
   it 'changes the behavior of the String method to make it render as a comment' do
