@@ -1,6 +1,9 @@
+#complete jan 20, 2017
+
 require 'rspec'
 
 def array_converter *arrays
+  arrays.join(' ').split.map{|x| x.to_i}
 end
 
 describe 'Combine arrays and convert strings to integers' do
