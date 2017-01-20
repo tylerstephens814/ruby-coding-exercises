@@ -15,3 +15,10 @@ describe 'Combine arrays and convert strings to integers' do
     expect(array_converter(arr_1).first).to eq(1)
   end
 end
+
+
+#----SOLUTION BY JOSH MCDONALD-----JAN 20,2017
+
+# def array_converter *arrays
+#  [].concat(*arrays).map(&:to_i)
+# end
