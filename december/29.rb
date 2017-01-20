@@ -1,4 +1,28 @@
+#Complete Jan 20, 2017
+
 require 'rspec'
+
+class Array
+
+  def bubble_sort
+    n = self.length
+    arr = self
+  loop do
+    swapped = false
+
+    (n-1).times do |i|
+      if arr[i] > arr[i+1]
+        arr[i], arr[i+1] = arr[i+1], arr[i]
+        swapped = true
+      end
+    end
+
+    break if not swapped
+  end
+  
+  arr
+end
+end
 
 describe 'Adding bubble sort to the Array class' do
   it 'Properly sorts an array' do
