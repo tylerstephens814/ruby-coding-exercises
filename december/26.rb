@@ -1,6 +1,9 @@
+#Completed Jan 20, 2017
+
 require 'rspec'
 
 years = (1900..1999).to_a
+leap_years = years.select {|x| x % 4 == 0 && x < 2000 && x > 1900}
 
 describe 'Leap year calculation' do
   it 'properly renders the leap years for the 20th century' do
