@@ -1,6 +1,10 @@
+#Complete Jan 20, 2017
+
 require 'rspec'
 
 def palindrome? word
+  word.downcase!
+  word == word.reverse
 end
 
 describe 'Check if a word is a palindrome' do
