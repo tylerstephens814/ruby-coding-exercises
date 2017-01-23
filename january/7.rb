@@ -1,12 +1,16 @@
+#Complete Jan 23, 2017
+
 require 'rspec'
 
 menu = {
   'appetizers': ['Chips', 'Quesadillas', 'Flatbread'],
   'entrees': ['Steak', 'Chicken', 'Lobster'],
-  'dessers': ['Cheesecake', 'Cake', 'Cupcake']
+  'desserts': ['Cheesecake', 'Cake', 'Cupcake']
 }
 
 def daily_special hash
+  category = [:appetizers, :entrees, :desserts]
+  hash[category[rand(0...3)]][rand(0...3)]
 end
 
 describe 'Nested hash element selector' do
@@ -14,4 +18,3 @@ describe 'Nested hash element selector' do
     expect(daily_special(menu).class).to eq(String)
   end
 end
-
