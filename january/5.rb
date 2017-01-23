@@ -1,3 +1,5 @@
+#Complete Jan 23, 2017
+
 require 'rspec'
 
 def generate_alphabet
