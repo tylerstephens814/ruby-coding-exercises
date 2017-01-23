@@ -1,6 +1,11 @@
+#Complete Jan 23, 2017
+
+
 require 'rspec'
 
 def increment_value str
+  inc = str
+  inc << str[-1].next
 end
 
 describe 'Increment string value sequence' do
