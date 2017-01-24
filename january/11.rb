@@ -1,7 +1,10 @@
+#Complete Jan 24, 2017
+
 require 'rspec'
 
 class Array
   def odd_selector
+    self.select{|x| x.odd? }
   end
 end
 
