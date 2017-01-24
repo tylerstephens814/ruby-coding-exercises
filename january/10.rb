@@ -1,6 +1,9 @@
+#Complete Jan 24, 2017
+
 require 'rspec'
 
 def sum_generator num
+  (0..num).inject{|sum, a| sum + a}
 end
 
 describe 'Dynamic sum' do
