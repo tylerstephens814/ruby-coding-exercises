@@ -1,6 +1,13 @@
+#Complete January 25, 2017
+
 require 'rspec'
 
 def title_builder headers, data
+  hash = {}
+  headers.size.times do |x|
+    hash[headers[x]] = data[x]
+  end
+  hash
 end
 
 describe 'Hash builder' do
