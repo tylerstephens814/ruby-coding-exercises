@@ -21,3 +21,5 @@ describe 'HTML Param Converter' do
     expect(hash.param_converter).to eq('topic=baseball&team=astros')
   end
 end
+
+# self.map {|i| i * "="} * "&" JORDAN HUDGENS SOLUTION
