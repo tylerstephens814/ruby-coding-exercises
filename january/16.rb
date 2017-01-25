@@ -1,6 +1,12 @@
+#Complete Jan 25, 2017
+
 require 'rspec'
 
 def array_rotation arr, num
+  num.times do 
+    arr.push(arr.shift)
+  end
+  arr
 end
 
 describe 'Array index change' do
