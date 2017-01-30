@@ -1,14 +1,26 @@
 #Completed Jan 20, 2017
+#Updated with  better solution Jan 30, 2017
 
 require 'rspec'
 
+module RubyContent
+  refine String do
+    def commentize
+      "# #{self}"
+    end
+  end
+end
+
+
 class ContentController
+  using RubyContent
+
   def initialize(word)
     @word = word
   end
 
   def hidden_content
-    "# #{@word}"
+    @word.commentize
   end
 end
 
