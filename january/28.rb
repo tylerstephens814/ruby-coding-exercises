@@ -1,7 +1,10 @@
+#Complete Jan 31, 2017
+
 require 'rspec'
 require 'date'
 
-def day_counter
+def day_counter date1 = '2004-7-1' , date2 = '2016-12-25'
+  (Date.parse(date2) - Date.parse(date1)).to_i
 end
 
 describe 'Day counter' do
