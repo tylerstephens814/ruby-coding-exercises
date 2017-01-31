@@ -1,4 +1,17 @@
+#Complete Jan 31, 2017
+
+
 require 'rspec'
+
+
+def image_tag image_path, options = {}
+  str = "<img src='#{image_path}'"
+
+  options.map {|k,v| str << " #{k}='#{v}'"}
+
+  str << ">"
+
+end
 
 describe 'Cloned image_tag' do
   before do
