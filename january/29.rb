@@ -1,6 +1,15 @@
+#Complete Feb 1, 2017
+
 require 'rspec'
 
 class NullClass
+  def method_missing(name, *args, &block)
+    self
+  end
+
+  def respond_to_missing?(name, include_provate = false)
+    name.to_s || super
+  end
 end
 
 describe 'Null class' do
