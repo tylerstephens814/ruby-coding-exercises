@@ -5,7 +5,7 @@ require 'csv'
 # support/generated_file.csv
 
 def csv_tool headers, data
-  CSV.open('support/generated_file.csv', 'wb') do |csv|
+  CSV.open('../support/generated_file.csv', 'wb') do |csv|
     csv << headers
 
     data.each do |column|
@@ -23,12 +23,12 @@ describe 'CSV generator' do
       ["Kylo Ren", "COO", "daddy2@issues.com"],
     ]
 
-    test_csv_file = File.read('support/crm.csv').gsub(/\r\n?/, "\n")
+    test_csv_file = File.read('../support/crm.csv').gsub(/\r\n?/, "\n")
 
     csv_tool headers, crm_data
 
-    generated_file = File.read('support/generated_file.csv')
+    generated_file = File.read('../support/generated_file.csv')
 
-    expect(generated_file).to eq(test_csv_file)
+    expect(generated_file.chomp).to eq(test_csv_file)
   end
 end
