@@ -1,4 +1,10 @@
+#Complete Feb 14, 2017 <3
+
 require 'rspec'
+
+def find_element(arr, name)
+  arr.rassoc(name)
+end
 
 describe 'Find Element' do
   it 'returns an array from a nested array if the second element equals the queried element' do
