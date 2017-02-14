@@ -1,8 +1,16 @@
+#Completed Feb 14, 2017 <3
+
 require 'rspec'
 
-describe 'Array to Hash converter' do
-  it 'converts an array to a hash, with the keys being the index and the value being the element' do
-    arr = %w{the quick brown fox}
-    expect(arr.index_hash).to eq({0=>"the", 1=>"quick", 2=>"brown", 3=>"fox"})
+def csv_parser file_path
+  lines = File.read(file_path).split(/\n/).map do |line|
+    line.split(',')
+  end
+end
+
+describe 'CSV Parser' do
+  it 'parses a CSV file and stores each line as an array, with each column as a separate element in the array' do
+   final_data = [["Name", "Title", "Email"], ["Darth Vader", "CEO", "betterthan@theforce.com"], ["Luke Skywalker", "Dev", "daddy@issues.com"], ["Kylo Ren", "COO", "daddy2@issues.com"]]
+   expect(csv_parser('support/crm.csv')).to eq(final_data)
   end
 end
