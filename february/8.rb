@@ -1,4 +1,20 @@
+#Complete Feb 14, 2017 <3
+
 require 'rspec'
+
+# class Array
+#   def remove_duplicates
+#     self.uniq
+#   end
+# end
+
+class Array
+  def remove_duplicates
+    self.each_with_object([]) do |e, arr|
+      arr << e unless arr.include?(e)
+    end
+  end
+end
 
 describe 'Duplicate removal' do
   it 'Removed duplicates from an array' do
