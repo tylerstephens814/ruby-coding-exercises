@@ -1,10 +1,9 @@
 #Complete Jan 30, 2017
 
-
 require 'rspec'
 
 
-def lineup_generator(list, &block)
+def lineup_generator(list)
   list.map.with_index(1) do |player, index|
     yield(index, player)
   end
